@@ -16,8 +16,9 @@ public class demo2
                 BufferedReader br = new BufferedReader(new InputStreamReader(System.in));
                 Scanner sc = new Scanner(System.in);
                 ArrayList<String> list = new ArrayList<>();
-                out.println("Enter digit how many words you want sorted");
+                out.println("Enter number how many words you want sorted\nif want exit enter 0");
                 int q = sc.nextInt();
+                if(q == 0){break;}
                 for (int i = 1; i < q+1; i++) {
                     try {
                         out.println("Enter your "+i+" word");
@@ -44,7 +45,7 @@ public class demo2
                     redline = false;
                 }
             } catch (Exception e) {
-                out.println("You enter incorrect data about quantity rows.\nNumber of rows must be digit and Integer\nif you want continue insert y, for exit press any another button and ENTER");
+                out.println("You enter incorrect number about quantity rows.\nNumber of rows must be digit and Integer\nif you want continue press y, for exit press any another button and ENTER");
                 try {
                     Scanner sc = new Scanner(System.in);
                     String z = sc.nextLine();
