@@ -1,6 +1,6 @@
 import java.util.Scanner;
 
-public class demo1 {
+public class factorial_recursion {
 
     private static int factorial(int n) {
         int result;

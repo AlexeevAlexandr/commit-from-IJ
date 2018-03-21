@@ -7,7 +7,7 @@ import java.util.Scanner;
 
 import static java.lang.System.out;
 
-public class demo2
+public class sort_list
 {
     public static void main(String args[]) {
         String str = "";
