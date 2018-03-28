@@ -17,7 +17,6 @@ class Gen <T, V> {
     void showType () {
         System.out.println("Type Т is: " + ob.getClass().getName());
         System.out.println("Type V is: " + ob2.getClass().getName());
-
     }
     static void scanner(){
         Scanner scanner = new Scanner(System.in);
