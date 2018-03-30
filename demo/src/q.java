@@ -9,10 +9,10 @@ class HighTemp {
     boolean sameTemp(HighTemp ht2) {
         return hTemp == ht2.hTemp;
     }
-        boolean lessThanTemp (HighTemp ht2) {
-            return hTemp < ht2.hTemp;
-        }
+    boolean lessThanTemp (HighTemp ht2) {
+        return hTemp < ht2.hTemp;
     }
+}
 class InstanceMethWithObjectRefDemo{
     private static <T> int counter(T[] vals, MyFunc<T> f, T v) {
         int count = 0;
