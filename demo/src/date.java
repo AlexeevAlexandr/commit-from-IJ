@@ -10,5 +10,8 @@ public class date {
 
         System.out.println(format2.format(d));
         System.out.println(format1.format(d));
+
+        Calendar cal = Calendar.getInstance();
+        System.out.printf("%te %<tB %<tY",cal);
     }
 }
