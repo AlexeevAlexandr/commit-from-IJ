@@ -11,7 +11,12 @@ public class date {
         System.out.println(format2.format(d));
         System.out.println(format1.format(d));
 
+        System.out.println();
+
         Calendar cal = Calendar.getInstance();
-        System.out.printf("%te %<tB %<tY",cal);
+        System.out.printf("%tT",cal);//14:49:09
+        System.out.printf(" %tA %n",cal);//вторник
+        System.out.printf("%te %<tB %<tY %n",cal);//3 апреля 2018
+        System.out.printf("%tc",cal);//вт апр. 03 14:49:09 EEST 2018
     }
 }
