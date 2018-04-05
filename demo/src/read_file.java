@@ -1,13 +1,11 @@
-import java.io.FileNotFoundException;
-import java.io.FileReader;
+import java.io.*;
 import java.util.Scanner;
 
 public class read_file {
     public static void main (String args []){
         String i;
         int count=0;
-        try{
-            FileReader fin = new FileReader("D:\\2\\Calculate2.txt");
+        try(FileReader fin = new FileReader("D:\\2\\Calculate2.txt")){ //try with parameters - auto closing file
             Scanner sc = new Scanner(fin);
             sc.useDelimiter(",");
             do{
@@ -18,7 +16,7 @@ public class read_file {
                 }
               }while(sc.hasNext());
             System.out.println("Count string = "+count);
-            sc.close();
-        }catch(FileNotFoundException e){System.out.println("File not found");}
+
+        }catch(IOException e){System.out.println("File not found");}
     }
 }
