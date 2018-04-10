@@ -6,7 +6,7 @@ import java.nio.file.InvalidPathException;
 import java.nio.file.Paths;
 import java.nio.file.StandardOpenOption;
 
-public class qq {
+public class write_and_read_file {
     public static void main (String args []){
         try(FileChannel file = (FileChannel) Files.newByteChannel(Paths.get("D:\\2\\demo.txt"), StandardOpenOption.WRITE,StandardOpenOption.READ,StandardOpenOption.CREATE)){
             MappedByteBuffer buf = file.map(FileChannel.MapMode.READ_WRITE, 0, 26);
