@@ -1,14 +1,11 @@
 import javafx.application.Application;
-import javafx.event.*;
-import javafx.geometry.*;
+import javafx.geometry.Pos;
 import javafx.scene.Scene;
 import javafx.scene.control.Label;
 import javafx.scene.control.RadioButton;
 import javafx.scene.control.ToggleGroup;
 import javafx.scene.layout.FlowPane;
 import javafx.stage.Stage;
-
-import java.awt.event.ActionEvent;
 
 public class javaFX extends Application {
     private Label myLabel;
@@ -33,11 +30,7 @@ public class javaFX extends Application {
         //set generation event for button, it need if button selected by default
         a.fire();
         //adding events for buttons
-        a.setOnAction(new EventHandler<ActionEvent>(){
-            public void handle (ActionEvent ae){
-                myLabel.setText("A");
-            }
-            });
+        a.setOnAction(event -> myLabel.setText("A"));
         b.setOnAction(event -> myLabel.setText("B"));
 
         FlowPane rootNode = new FlowPane(10,10);//values set space between the buttons
