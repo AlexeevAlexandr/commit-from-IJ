@@ -2,7 +2,8 @@ package WorkWithArrayList;
 
 public class Main {
     public static void main(String[] args) {
-        ArrayListDemo arrayList = new ArrayListDemo();
+        Processing processing = new Processing();
+        Commands commands = new Commands();
         View view = new View();
         boolean check = true;
         view.print("Hello!");
@@ -14,16 +15,19 @@ public class Main {
 
                 switch (value) {
                     case "help":
-                        help(view);
+                        commands.help(view);
                         break;
                     case "add":
-                        add(arrayList, view);
+                        commands.add(processing, view);
                         break;
                     case "add by index":
-                        addByIndex(arrayList, view);
+                        commands.addByIndex(processing, view);
+                        break;
+                        case "clear":
+                        commands.clear(processing, view);
                         break;
                     case "list":
-                        list(arrayList, view);
+                        commands.list(processing, view);
                         break;
                     case "exit":
                         view.print("goodbye, see you soon");
@@ -36,55 +40,6 @@ public class Main {
             }catch (Exception e){
                 view.print("incorrect command");
             }
-        }
-    }
-
-    private static void addByIndex(ArrayListDemo arrayList, View view) {
-        while (true) {
-            try {
-                view.print("add value or 'q' if you finished");
-                Object value = view.write();
-                view.print("add index from 1 to " + (arrayList.size()));
-                int index = (view.writeInt() - 1);
-                if (!value.equals("q")) {
-                    arrayList.addByIndex(index, value);
-                    view.print("added");
-                } else {
-                    view.print("data to list is saved");
-                    break;
-                }
-            }catch (Exception e){view.print("incorrect index, try again");}
-        }
-    }
-
-    private static void add(ArrayListDemo arrayList, View view) {
-        while (true) {
-            view.print("add value or 'q' if you finished");
-            Object values = view.write();
-            if (!values.equals("q")) {
-                arrayList.add(values);
-                view.print("added");
-            } else {
-                view.print("data to list is saved");
-                break;
-            }
-        }
-    }
-
-    private static void help(View view) {
-        view.print("available commands:\n" +
-                "add - add to list value\n" +
-                "add by index - add to list on specific position\n" +
-                "list - print list\n" +
-                "exit - to exit");
-    }
-
-    private static void list(ArrayListDemo arrayList, View view) {
-        view.print("list:");
-        if (arrayList.size() != 0) {
-            view.print(arrayList.list.toString().replaceAll("[\\[\\]]", ""));
-        } else {
-            view.print("list is empty");
         }
     }
 }

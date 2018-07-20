@@ -3,7 +3,7 @@ package WorkWithArrayList;
 import java.util.ArrayList;
 import java.util.Scanner;
 
-class ArrayListDemo {
+class Processing {
     ArrayList<Object> list = new ArrayList<>();
 
     int size(){
@@ -16,6 +16,10 @@ class ArrayListDemo {
 
     void addByIndex(int index, Object value){
         list.add(index, value);
+    }
+
+    void clear(){
+        list = new ArrayList<>();
     }
 
 }
