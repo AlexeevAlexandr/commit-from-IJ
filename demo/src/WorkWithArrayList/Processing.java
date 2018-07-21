@@ -22,4 +22,7 @@ class Processing {
         list = new ArrayList<>();
     }
 
+    void deleteByIndex(int index){
+        list.remove(index);
+    }
 }

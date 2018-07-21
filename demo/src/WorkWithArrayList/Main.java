@@ -23,8 +23,11 @@ public class Main {
                     case "add by index":
                         commands.addByIndex(processing, view);
                         break;
-                        case "clear":
+                    case "clear":
                         commands.clear(processing, view);
+                        break;
+                    case "delete by index":
+                        commands.deleteByIndex(processing, view);
                         break;
                     case "list":
                         commands.list(processing, view);

@@ -34,11 +34,16 @@ class Commands {
     }
 
     void help(View view) {
-        view.print("available commands:\n" +
-                "add - add to list value\n" +
-                "add by index - add to list on specific position\n" +
-                "list - print list\n" +
-                "exit - to exit");
+        view.print ("=================================================\n" +
+                    "available commands:\n" +
+                    "-------------------------------------------------" +
+                    "add - add to list value\n" +
+                    "add by index - add to list on specific position\n" +
+                    "clear - delete all data\n" +
+                    "delete By Index - delete data from entered index\n" +
+                    "list - print list\n" +
+                    "exit - to exit\n" +
+                    "=================================================");
     }
 
     void list(Processing arrayList, View view) {
@@ -57,5 +62,11 @@ class Commands {
         processing.clear();
         view.print("list cleared");
         } else {view.print("delete aborted");}
+    }
+
+    void deleteByIndex(Processing processing, View view) {
+        int index = view.writeInt();
+        processing.deleteByIndex(index+1);
+        view.print("data from " + (index+1) + "position is deleted");
     }
 }
