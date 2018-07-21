@@ -17,6 +17,9 @@ public class Main {
                     case "help":
                         commands.help(view);
                         break;
+                    case "list":
+                        commands.list(processing, view);
+                        break;
                     case "add":
                         commands.add(processing, view);
                         break;
@@ -29,8 +32,8 @@ public class Main {
                     case "delete by index":
                         commands.deleteByIndex(processing, view);
                         break;
-                    case "list":
-                        commands.list(processing, view);
+                    case "replace":
+                        commands.replace(processing, view);
                         break;
                     case "exit":
                         view.print("goodbye, see you soon");
