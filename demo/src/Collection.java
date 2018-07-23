@@ -12,7 +12,7 @@ public class Collection {
         out.println("original list: "+list);
 
         Comparator<Integer> r = Collections.reverseOrder();//sort and reverse list
-        Collections.sort(list, r);
+        list.sort(r);
         out.print("sort list: ");
         for(int i : list) out.print(i + " ");
 
