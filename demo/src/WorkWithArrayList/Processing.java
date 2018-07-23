@@ -22,4 +22,11 @@ class Processing {
         list = new ArrayList<>();
     }
 
+    void deleteByIndex(int index){
+        list.remove(index);
+    }
+
+    void replace(int index, Object value){
+        list.set(index, value);
+    }
 }
