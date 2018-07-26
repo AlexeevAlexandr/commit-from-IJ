@@ -3,7 +3,7 @@ import java.util.*;
 
 public class Tree_Hash_Linked_Map {
     public static void main(String args[]){
-        //HashMap - outputting element do`t safe sequence inputting
+        //HashMap - outputting element don`t safe sequence inputting
         //TreeMap - outputting sort element
         //LinkedHashMap - outputting elements as they are was inputted
         TreeMap<String, Double> tm = new TreeMap<>();
