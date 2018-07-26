@@ -1,13 +1,17 @@
-package IO_Pattern_bridge;
+package IO.IO_Pattern_bridge;
 
 import java.io.*;
 import java.util.Arrays;
 
+/**
+ * convert byte to char and conversely
+ */
 public class Pattern_bridge {
     public static void main(String[] args) throws IOException {
         byte[] data = {72, 101, 108, 108, 111, 32, 87, 111, 114, 108, 100, 33};
         try(InputStream input = new ByteArrayInputStream(data);
-        Reader reader = new InputStreamReader(input, "UTF-8")) {
+        Reader reader = new InputStreamReader(input, "UTF-8"))
+        {
             char[] buffer = new char[11];
             reader.read(buffer);
             System.out.println(buffer);
