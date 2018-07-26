@@ -1,8 +1,10 @@
+package Collection;
+
 import java.util.*;
 
 import static java.lang.System.out;
 
-public class Collection {
+public class Linked_List {
     public static void main (String args[]){
         LinkedList<Integer> list = new LinkedList<>();
         list.add(-5);
