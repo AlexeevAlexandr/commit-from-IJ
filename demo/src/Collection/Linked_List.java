@@ -1,8 +1,10 @@
+package Collection;
+
 import java.util.*;
 
 import static java.lang.System.out;
 
-public class Collection {
+public class Linked_List {
     public static void main (String args[]){
         LinkedList<Integer> list = new LinkedList<>();
         list.add(-5);
@@ -12,7 +14,7 @@ public class Collection {
         out.println("original list: "+list);
 
         Comparator<Integer> r = Collections.reverseOrder();//sort and reverse list
-        Collections.sort(list, r);
+        list.sort(r);
         out.print("sort list: ");
         for(int i : list) out.print(i + " ");
 
