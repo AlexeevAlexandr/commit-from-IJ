@@ -6,7 +6,7 @@ import java.util.Scanner;
 /**
  * write, read data
  * auto creating file
- * first file - write all string
+ * first file - write all of string
  * second file - write every second char
  * third file - write last quarter of string
  */

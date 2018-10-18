@@ -1,31 +1,26 @@
-import java.util.Scanner;
-class Calculator1{
-    int power(int n,int p) throws Exception {
-        int q;
-            if (n >= 0 & p >= 0) {
-                q = (int) Math.pow(n, p);
-                return q;
-            } else {
-                throw new Exception("n and p should be non-negative");
-        }
+import java.util.Iterator;
+import java.util.TreeMap;
+
+class Solution {
+    private TreeMap<Integer,Object> all = new TreeMap<>();
+
+    private int solution(int[] A) {
+        for(int i=0; i<A.length; i++)
+            all.put(i+1,new Object());
+
+        for (int aA : A)
+            all.remove(aA);
+
+        Iterator notOccur = all.keySet().iterator();
+        if(notOccur.hasNext())
+            return (int)notOccur.next();
+
+        return 1;
     }
-}
-class Calculator2{
+
     public static void main(String[] args) {
-        Scanner in = new Scanner(System.in);
-        int t = in.nextInt();
-        while (t-- > 0) {
-            int n = in.nextInt();
-            int p = in.nextInt();
-            Calculator1 myCalculator = new Calculator1();
-            try {
-                int ans = myCalculator.power(n, p);
-                System.out.println(ans);
-            }
-            catch (Exception e) {
-                System.out.println(e.getMessage());
-            }
-        }
-        in.close();
+        int [] a = {1, 2, 3};
+        Solution sol = new Solution();
+        System.out.println(sol.solution(a));
     }
 }

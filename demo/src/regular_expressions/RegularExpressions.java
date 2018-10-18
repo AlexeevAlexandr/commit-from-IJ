@@ -11,6 +11,15 @@ public class RegularExpressions {
         return m.matches();
     }
 
+    private String testPartString(String test){
+        Pattern p = Pattern.compile("(I).+(\\1)");
+        Matcher m = p.matcher(test);
+        if (m.find()) {
+            return m.group();
+        }
+        return null;
+    }
+
     private String testReplaceAll(String test){
         return test.replaceAll("([Tt]h?a[yi]land)", "Ukraine");
     }
@@ -32,5 +41,7 @@ public class RegularExpressions {
 
         System.out.println(reg.testValidInteger(4));
         System.out.println(reg.testValidInteger(6));
+
+        System.out.println(reg.testPartString("Look at me, I am... I am very tall and same time I am small"));
     }
 }
