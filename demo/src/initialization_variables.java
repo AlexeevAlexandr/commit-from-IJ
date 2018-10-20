@@ -4,6 +4,7 @@ class initialization_variables {
     private static int B;
     private static int H;
     private static boolean flag;
+
     static{
         Scanner sc = new Scanner(System.in);
         B=sc.nextInt();

@@ -1,9 +1,11 @@
 import java.io.File;
 
 public class info_about_file {
+
     private static void p(String s) {
         System.out.println(s);
     }
+
     public static void main(String args []){
         File fl = new File("D:\\2\\demo.txt");
         p ("Name file: "+fl.getName());
