@@ -4,16 +4,16 @@ import java.util.Arrays;
 class FractionUtils {
     static BigInteger[] sum(BigInteger[] x, BigInteger[] y) {
         BigInteger[] result = new BigInteger[]{new BigInteger("0"), new BigInteger("1")};
-        BigInteger commonВenominator = lcm(x[1], y[1]);
-        BigInteger numerator = x[0].multiply(commonВenominator.divide(x[1])).add(y[0].multiply(commonВenominator.divide(y[1])));
+        BigInteger biginteger = lcm(x[1], y[1]);
+        BigInteger numerator = x[0].multiply(biginteger.divide(x[1])).add(y[0].multiply(biginteger.divide(y[1])));
 
         if ( result[0].compareTo(numerator) == 0 ) {
             return result;
         }
-        BigInteger gcdBigInteger = numerator.gcd(commonВenominator);
+        BigInteger gcdBigInteger = numerator.gcd(biginteger);
 
         result[0] = numerator.divide(gcdBigInteger);
-        result[1] = commonВenominator.divide(gcdBigInteger);
+        result[1] = biginteger.divide(gcdBigInteger);
         return result;
     }
 

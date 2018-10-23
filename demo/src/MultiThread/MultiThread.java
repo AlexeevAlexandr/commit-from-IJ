@@ -11,14 +11,8 @@ class Demo implements Runnable {
 
     @Override
     public void run() {
-        for (int i = 0; i <= 10; i++) {
-            System.out.println(i);
-            try {
-                Thread.sleep(1000);
-            } catch (InterruptedException e) {
-                e.printStackTrace();
-            }
-        }
+        A a = new A();
+        a.method();
     }
 }
 
@@ -31,13 +25,19 @@ class Demo2 implements Runnable {
         thread.setPriority(10);
     }
 
-
     @Override
     public void run() {
-        for (int i = 0; i >= -40; i--) {
+        A a = new A();
+        a.method();
+    }
+}
+
+class A{
+    void method(){
+        for (int i = 1; i <= 10; i++) {
             System.out.println(i);
             try {
-                Thread.sleep(300);
+                Thread.sleep(1000);
             } catch (InterruptedException e) {
                 e.printStackTrace();
             }
