@@ -2,13 +2,12 @@ package Collection;
 
 import java.util.*;
 
-
 public class Tree_Hash_Linked_Map {
     public static void main(String args[]){
-        //HashMap - outputting element don`t safe sequence inputting
-        //TreeMap - outputting sort element
-        //LinkedHashMap - outputting elements as they are was inputted
-        TreeMap<String, Double> tm = new TreeMap<>();
+        //HashMap - contains element don`t safe sequence inputting
+        //TreeMap - contains sorted elements by key
+        //LinkedHashMap - contains elements as they are were inputted
+        Map<String, Double> tm = new TreeMap<>();
         tm.put("Ben Dou", 345.02);
         tm.put("Ann Parker", 210.12);
         tm.put("Carl Smith", 587.56);
