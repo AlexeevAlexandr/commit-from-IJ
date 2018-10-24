@@ -1,7 +1,6 @@
-package WorkWithArrayList;
+package Collection.ArrayList;
 
 import java.util.ArrayList;
-import java.util.Scanner;
 
 class Processing {
     ArrayList<Object> list = new ArrayList<>();

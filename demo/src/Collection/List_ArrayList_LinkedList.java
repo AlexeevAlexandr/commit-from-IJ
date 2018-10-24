@@ -1,7 +1,6 @@
 package Collection;
 
 import java.util.*;
-
 import static java.lang.System.out;
 
 public class List_ArrayList_LinkedList {

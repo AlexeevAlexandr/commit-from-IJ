@@ -1,4 +1,4 @@
-package WorkWithArrayList;
+package Collection.ArrayList;
 
 class Commands {
     void help(View view) {
