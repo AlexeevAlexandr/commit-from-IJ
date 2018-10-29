@@ -5,12 +5,9 @@ import java.util.List;
 
 public class StreamDemo {
     public static void main(String[] args) {
-        List<String> myList = Arrays.asList("a1", "a2", "reb1", "c2", "forest");
+        List<String> myList = Arrays.asList("1","b1","ee1w2","a1","s1","s12s");
 
-//        myList.stream().filter(s -> s.startsWith("c")).map(String::toUpperCase).sorted().forEach(System.out::println);
-//        System.out.println(myList.stream().filter("a1"::equals).count());//prints the number of matches
-//        myList.stream().sorted().forEach(System.out::println);// prints sorted list
-//        myList.stream().filter(s -> s.startsWith("1",1)).forEach(System.out::print);
-        System.out.println(myList.stream().findAny());
+        myList.stream().reduce((s1,s2) -> s1 + s2).orElse("0");
+        myList.forEach(System.out::println);
     }
 }
