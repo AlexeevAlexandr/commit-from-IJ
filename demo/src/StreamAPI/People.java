@@ -56,7 +56,7 @@ public class People {
     private double getAverageAge(List<People> myList){
         return myList.stream().filter(b ->
                 b.getSex().equals("man"))
-                .mapToInt(People::getAge).average().getAsDouble();
+                .mapToDouble(People::getAge).average().getAsDouble();
     }
 
     private long getNumberOfWorkAblePeoples(List<People> myList){
