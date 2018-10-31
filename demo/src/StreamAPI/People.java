@@ -1,6 +1,10 @@
 package StreamAPI;
 
+import javafx.print.Collation;
+
 import java.util.Arrays;
+import java.util.Collections;
+import java.util.Comparator;
 import java.util.List;
 import java.util.stream.Collectors;
 
@@ -66,6 +70,18 @@ public class People {
                 .count();
     }
 
+    private List<People> sortedByName(List<People> myList){
+        return myList.stream().sorted(Comparator.comparing(People::getName)).collect(Collectors.toList());
+    }
+
+    private List<People> sortedBySex(List<People> myList){
+        return myList.stream().sorted(Comparator.comparing(People::getSex)).collect(Collectors.toList());
+    }
+
+    private List<People> sortedByAge(List<People> myList){
+        return myList.stream().sorted(Comparator.comparing(People::getAge)).collect(Collectors.toList());
+    }
+
     private List<People> getListOfWorkAblePeoples(List<People> myList){
         return myList.stream()
                 .filter(p -> p.getAge()>=18)
@@ -76,14 +92,14 @@ public class People {
     public static void main(String[] args) {
         List<People> myList = Arrays.asList(
                 new People("Olag",16,"man"),
+                new People("Katya",16,"woman"),
                 new People("Peta",18,"man"),
                 new People("Anton",22,"man"),
+                new People("Lida",45,"woman"),
                 new People("Ivan",40,"man"),
                 new People("Kolia",75,"man"),
-                new People("Katya",16,"woman"),
                 new People("Tonia",18,"woman"),
                 new People("Karina",20,"woman"),
-                new People("Lida",45,"woman"),
                 new People("Vera",70,"woman")
         );
         People people = new People();
@@ -92,5 +108,8 @@ public class People {
         System.out.println(people.getAverageAge(myList));
         System.out.println(people.getNumberOfWorkAblePeoples(myList));
         people.getListOfWorkAblePeoples(myList).forEach(System.out::println);
+        people.sortedByName(myList).forEach(System.out::println);
+        people.sortedBySex(myList).forEach(System.out::println);
+        people.sortedByAge(myList).forEach(System.out::println);
     }
 }
