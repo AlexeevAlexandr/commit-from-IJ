@@ -79,6 +79,10 @@ public class People {
         return myList.stream().sorted(Comparator.comparing(People::getAge)).collect(Collectors.toList());
     }
 
+    private People getManWithMaxAge(List<People> myList){
+        return myList.stream().max(Comparator.comparing(People::getAge)).get();
+    }
+
     private List<People> getListOfWorkAblePeoples(List<People> myList){
         return myList.stream()
                 .filter(p -> p.getAge()>=18)
@@ -108,5 +112,6 @@ public class People {
         people.sortedByName(myList).forEach(System.out::println);
         people.sortedBySex(myList).forEach(System.out::println);
         people.sortedByAge(myList).forEach(System.out::println);
+        System.out.println(people.getManWithMaxAge(myList));
     }
 }
