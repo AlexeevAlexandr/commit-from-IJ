@@ -37,7 +37,7 @@ public class People {
                 "\nSex = " + getSex() + "\n";
     }
 
-    private long getNuberOfPeoplesBeetwen18_27(List<People> myList){
+    private long getNuberOfPeoplesBetween18_27(List<People> myList){
         return myList.stream().filter(a ->
                 a.getAge()>=18 &&
                         a.getAge()<27 &&
@@ -45,7 +45,7 @@ public class People {
                 .count();
     }
 
-    private List<People> getListOfPeoplesBeetwen18_27(List<People> myList){
+    private List<People> getListOfPeoplesBetween18_27(List<People> myList){
         return myList.stream().filter(p ->
                         p.getAge()>=18 &&
                         p.getAge()<27 &&
@@ -87,8 +87,8 @@ public class People {
                 new People("Vera",70,"woman")
         );
         People people = new People();
-        System.out.println(people.getNuberOfPeoplesBeetwen18_27(myList));
-        people.getListOfPeoplesBeetwen18_27(myList).forEach(System.out::print);
+        System.out.println(people.getNuberOfPeoplesBetween18_27(myList));
+        people.getListOfPeoplesBetween18_27(myList).forEach(System.out::print);
         System.out.println(people.getAverageAge(myList));
         System.out.println(people.getNumberOfWorkAblePeoples(myList));
         people.getListOfWorkAblePeoples(myList).forEach(System.out::println);
