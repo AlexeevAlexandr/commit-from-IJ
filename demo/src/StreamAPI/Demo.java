@@ -12,5 +12,11 @@ public class Demo {
         list.stream().sorted(Comparator.reverseOrder()).distinct().forEach(System.out::println);
         System.out.println(list.stream().max(String::compareTo).get());
         System.out.println(list.stream().min(String::compareTo).get());
+
+        String [] str = {"1","2","3"};
+        int [] ints = Arrays.stream(str).mapToInt(Integer::parseInt).toArray();
+        for(int c : ints){
+            System.out.println(c);
+        }
     }
 }
