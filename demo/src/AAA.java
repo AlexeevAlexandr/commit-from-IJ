@@ -1,27 +1,19 @@
-import java.util.Arrays;
-
-import static java.lang.Math.abs;
-
 public class AAA {
-    private static int[] gradingStudents(int[] grades) {
-        int [] q = new int[grades[0]];
-        for (int i = 0; i < grades[0]; i++) {
-            int d = grades[i + 1];
-            if (d < 38) {
-                q[i] = d;
-            } else {
-                int b = abs((d % 5) - 5);
-                if (b < 3) {
-                    q[i] = d + b;
-                } else {
-                    q[i] = d;
-                }
+    private static int gradingStudents(int[] h, String word) {
+        int temp = 0;
+
+        for(int i = 0; i<word.length(); i++){
+            int ascii =(int)word.charAt(i);
+            int height = h[ascii- 97];
+            if(height>temp){
+                temp = height;
             }
         }
-        return q;
+        return temp*word.length();
     }
     public static void main(String[] args) {
-        int [] a = {4,73,67,38,33};
-        System.out.println(Arrays.toString(AAA.gradingStudents(a)));
+        int a[] = {1, 3, 1, 3, 1, 4, 1, 3, 2, 5, 5, 5, 5, 5, 5, 5, 5, 5, 5, 5, 5, 5, 5, 5, 5, 7};
+        String word = "zaba";
+        System.out.println(AAA.gradingStudents(a, word));
     }
 }
