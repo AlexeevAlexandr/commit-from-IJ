@@ -1,7 +1,7 @@
 package IO.FileReader;
-/**
- * read, write data
- * delete old data from file
+/*
+  read, write data
+  delete old data from file
  */
 
 import java.io.*;

@@ -14,13 +14,12 @@ public class randomAccessFile {
             dout1.seek(q);
 
             dout1.write(st.getBytes());
-            dout1.close();
         }catch(IOException e){System.out.println("Error: "+e);}
 
         try (RandomAccessFile dout2 = new RandomAccessFile ("D:\\2\\demo.txt", "r")){
             int s = dout2.read();
             while(s != -1){
-                res.append((char) s);//string builder, analog res += (char) s;
+                res.append((char) s);
                 s = dout2.read();
             }
             dout2.close();

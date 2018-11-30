@@ -3,7 +3,7 @@ package IO.FileOutput_InputStream;
 import java.io.*;
 import java.util.Scanner;
 
-/**
+/*
  * write, read data
  * auto creating file
  * first file - write all of string

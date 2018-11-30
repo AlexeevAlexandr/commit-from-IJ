@@ -46,7 +46,7 @@ class work_with_string {
         i.replace(0,4,"JAVA");
         out.println(i);
 
-        StringBuffer o = new StringBuffer(i);
+        StringBuilder o = new StringBuilder(i);
         String z = o.substring(0,4);//output part of string from 0 till 4 index
         String x = o.substring(4);//output part of string from 0 index till end
         out.println(z);
