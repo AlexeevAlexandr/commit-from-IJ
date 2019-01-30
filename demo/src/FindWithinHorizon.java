@@ -2,7 +2,7 @@ import java.io.*;
 import java.util.*;
 
 public class FindWithinHorizon {
-    public static void main(String args[]) {
+    public static void main(String[] args) {
         try {
             FileReader st = new FileReader("D:\\2\\demo.txt");
             Scanner sc = new Scanner(st);

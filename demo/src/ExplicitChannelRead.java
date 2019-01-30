@@ -6,7 +6,7 @@ import java.nio.file.InvalidPathException;
 import java.nio.file.Paths;
 
 public class ExplicitChannelRead {
-    public static void main(String args[]) {
+    public static void main(String[] args) {
         int count;
         try (SeekableByteChannel a = Files.newByteChannel(Paths.get("D:\\2\\demo1.txt"))){
             ByteBuffer q = ByteBuffer.allocate(128);//create memory for buffer

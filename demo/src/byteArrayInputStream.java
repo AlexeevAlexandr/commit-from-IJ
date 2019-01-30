@@ -3,9 +3,9 @@ import java.util.Scanner;
 
 //work with array of bytes
 public class byteArrayInputStream {
-    public static void main (String args []){
+    public static void main (String[] args){
         String tmp = "abcdefghijklmnopqrstuvwxyz";
-        byte b [] = tmp.getBytes();
+        byte[] b = tmp.getBytes();
 
         ByteArrayInputStream input1 = new ByteArrayInputStream(b);
         ByteArrayInputStream input2 = new ByteArrayInputStream(b,1,3);

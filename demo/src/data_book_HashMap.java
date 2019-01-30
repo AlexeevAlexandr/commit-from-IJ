@@ -4,7 +4,7 @@ import java.util.Scanner;
 
 class data_book_HashMap{
     public static void main(String []args){
-        String name="";
+        String name;
         int z;
         Scanner in = new Scanner(System.in);
         int n = in.nextInt();

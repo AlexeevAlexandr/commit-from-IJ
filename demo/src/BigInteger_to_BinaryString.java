@@ -5,8 +5,7 @@ import java.math.BigInteger;
 public class BigInteger_to_BinaryString {
     private static String toBitStr(BigInteger arg) {
         BigInteger myInt = new BigInteger(String.valueOf(arg));
-        String binaryString = myInt.toString(2);
-        return String.valueOf(binaryString);
+        return myInt.toString(2);
     }
 
     public static void main(String[] args) {

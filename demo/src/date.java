@@ -2,7 +2,7 @@ import java.text.SimpleDateFormat;
 import java.util.*;
 
 public class date {
-    public static void main(String args []){
+    public static void main(String[] args){
        Date d = new Date();
 
         SimpleDateFormat format1 = new SimpleDateFormat("HH:mm:ss");
