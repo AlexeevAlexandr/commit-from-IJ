@@ -1,5 +1,5 @@
 public class format_of_string {
-    public static void main (String args []){
+    public static void main (String[] args){
         double q = 12.5;
         int w = 1;
         System.out.printf("|%2.2f| %n",q);

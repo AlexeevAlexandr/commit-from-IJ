@@ -2,7 +2,7 @@ import java.io. *;
 import java.util.*;
 
 class PhoneBook{
-    public static void main (String args[]) throws IOException{
+    public static void main (String[] args) throws IOException{
         String name, number;
         FileInputStream fin = null;
         boolean changed = false;

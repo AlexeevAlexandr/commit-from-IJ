@@ -1,6 +1,6 @@
 import java.util.*;
 class properties_list {
-    public static void main(String args[]) {
+    public static void main(String[] args) {
         Properties capitals = new Properties();
         capitals.put("Иллинойс", "Спрингфилд");
         capitals.put("Миссури", "Джефферсон - Сити");
