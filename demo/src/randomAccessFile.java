@@ -3,7 +3,7 @@ import java.io.RandomAccessFile;
 import java.util.Scanner;
 
 public class randomAccessFile {
-    public static void main (String args []){
+    public static void main (String[] args){
         StringBuilder res = new StringBuilder();
 
         try(RandomAccessFile dout1 = new RandomAccessFile ("D:\\2\\demo.txt", "rws")){ //access to file can be: r-read; rw-read, write; rws-read, write, seek;

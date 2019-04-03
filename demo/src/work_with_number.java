@@ -1,7 +1,7 @@
 import static java.lang.Math.*;
 
 public class work_with_number {
-    public static void main (String args [] ){
+    public static void main (String[] args){
         double t= pow(5, 4);//return 5 in degree 4
         double y= scalb(5, 1);//return (5*2) 2 times
         double r= sqrt(25);//return root square from 25

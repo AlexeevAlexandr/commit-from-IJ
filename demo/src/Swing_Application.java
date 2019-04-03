@@ -23,7 +23,7 @@ public class Swing_Application {
 
         jfrm.setVisible(true);
     }
-    public static void main (String args []){
+    public static void main (String[] args){
         SwingUtilities.invokeLater(Swing_Application::new);
     }
 }

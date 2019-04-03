@@ -121,7 +121,7 @@ class Swing_Application2 implements ActionListener {
         if (comStr.equals("Date"))jlabel.setText(format2.format(d));
         //else jlabel.setText(comStr + " Selected");
     }
-    public static void main(String args[]) {
+    public static void main(String[] args) {
         SwingUtilities.invokeLater(Swing_Application2::new);
 
     }

@@ -4,7 +4,7 @@ import java.util.*;
 import static java.lang.System.out;
 
 public class List_ArrayList_LinkedList {
-    public static void main (String args[]){
+    public static void main (String[] args){
         //ArrayList
         //LinkedList
         LinkedList<Integer> list = new LinkedList<>();

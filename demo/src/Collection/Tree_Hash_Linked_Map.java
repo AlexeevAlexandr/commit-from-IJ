@@ -3,7 +3,7 @@ package Collection;
 import java.util.*;
 
 public class Tree_Hash_Linked_Map {
-    public static void main(String args[]){
+    public static void main(String[] args){
         //HashMap - contains element don`t safe sequence inputting
         //TreeMap - contains sorted elements by key
         //LinkedHashMap - contains elements as they are were inputted
